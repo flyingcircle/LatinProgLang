@@ -5,12 +5,6 @@ class Lexeme:
         self._left = None
         self._right = None
 
-    def __init__(self, name, value):
-        self.name = name
-        self.value = value
-        self._left = None
-        self._right = None
-
     def car(self):
         return self._left
 
@@ -27,3 +21,4 @@ def cons(name, left, right):
     parent = Lexeme(name)
     parent.setCar(left)
     parent.setCdr(right)
+    return parent
