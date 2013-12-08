@@ -1,0 +1,142 @@
+Instructions for writing code for the Latin Programming Language:
+
+**************************
+General Aims
+**************************
+The Latin Programming language is to be written in a way that might be understood as an international language.
+
+As such, the pattern for all keywords and builtin functions is to use the Nominative Singular for all nouns and the Infinitive for all verbs since those are the dictionary standards.
+
+
+**************************
+Moeneres (Functions)
+**************************
+Functions are written with the key word 'moenus'
+
+ex:
+moenus functionName[arg1, arg2]
+    statement1.
+    statement2.
+;
+
+All statements end in a '.' and the block ends in a ';'
+
+To return a value from a function use the keyword 'revenire'
+
+
+**************************
+Dum (While)
+**************************
+While loops are introduced with the keyword 'dum'
+
+ex:
+dum[cond expr]
+    statement1.
+    statement2.
+;
+
+**************************
+Si/Aut (If/Else)
+**************************
+Conditionals are as such: 'si'(if) and 'aut'(else).
+There is no combo, so all 'else if' constructions must be written as nested conditionals.
+
+ex:
+si[expr]
+    statement.
+;
+aut
+    si[expr]
+        statement.
+    ;
+    aut
+        statement.
+    ;
+;
+
+
+**************************
+Acies (Arrays)
+**************************
+Arrays can be created in 2 ways:
+
+CREATE ARRAYS:
+They can be initialized with null values with:
+creareAcies[n].
+
+or they can be created with a particular set of values by placing the list between a ":" and a ";".
+array1 = :1, 2, 3, 4;.
+
+ACCESS ELEMENTS:
+access a particular index with:
+potiorIndicina[array, index].
+
+SET ELEMENT AT INDEX:
+set the value at a particular index with:
+locareIndicina[array, index, value].
+
+**************************
+Lexicones (Dictionaries)
+**************************
+CREATE DICTIONARIES:
+create a dicitonary with the command:
+creareLexicon[].
+
+INSERT KEY-VALUE PAIR:
+indereLexicon[dictionary, key, value].
+
+LOOKUP VALUE:
+pervidereLexicon[dictionary, key].
+
+**************************
+Integers
+**************************
+LPL allows for integers and can be written as expected.
+
+Negative numbers can be created with the function call:
+neg[n].
+
+**************************
+Booleans
+**************************
+Booleans are represented as numbers.
+
+0 => False
+All other numbers are True.
+
+**************************
+Printing
+**************************
+Print with the function:
+
+legere["string 1", var1].
+
+**************************
+Operators
+**************************
+The available operators are:
+
++, -, *, /, %, ==, >, <, <=, >=, !=, &, |, ^
+
+Most operators act as expected the exceptions are:
+
+&, |, ^ are logical operators not bit-wise.
+
+The difference between ==, !=, and ^ is that ^ treats the numbers as booleans and != and == tests for equality.
+
+ex:
+34 ^ 20 => 1
+34 == 20 => 0
+
+ORDER OF OPERATIONS:
+There is no order of operations including the boolean operators so the only way to have assured order is by placing each individual operation inside of brackets.
+
+ex:
+[ [ [4 + 3] / 2] == 0]
+
+**************************
+Comments
+**************************
+Comments are placed inbetween a '#' and ';'.
+
+These are block comments so it will continue from line to line.

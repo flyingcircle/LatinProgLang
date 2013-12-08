@@ -1,0 +1,11 @@
+moenus funcTwo[]
+    revenire legere["statement2"].
+;
+
+moenus funcOne[]
+    legere["statement1"].
+    funcTwo[].
+    legere["statement3"].
+;
+
+funcOne[].

@@ -1,0 +1,8 @@
+newDict = creareLexicon[].
+indereLexicon[newDict, "key1", 30].
+indereLexicon[newDict, "key2", 59].
+indereLexicon[newDict, "key5", 22].
+
+legere[pervidereLexicon[newDict, "key2"], " (should be 59)"].
+legere[pervidereLexicon[newDict, "key5"], " (should be 22)"].
+legere[pervidereLexicon[newDict, "key1"], " (should be 30)"].

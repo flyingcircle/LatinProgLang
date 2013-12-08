@@ -1,0 +1,15 @@
+moenus fib[n]
+    i = 0.
+    a = 0.
+    b = 1.
+    dum[i < n]
+        i = i + 1.
+        temp = a.
+        a = b.
+        b = temp + b.
+    ;
+    revenire a.
+;
+legere[fib[0], " (should be 0)"].
+legere[fib[4], " (should be 3)"].
+legere[fib[6], " (should be 8)"].

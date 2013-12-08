@@ -1,0 +1,11 @@
+moenus apply[f, x] #apply the function f with a single argument x;
+    f[x].
+;
+
+moenus square[x]
+    y = x * x.
+    revenire y.
+;
+
+legere[apply[square, 6], " (should be 36)"].
+apply[legere, "passing builtin!"].

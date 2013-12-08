@@ -1,0 +1,131 @@
+head = 0.
+free = 0.
+pointers = 0.
+values = 0.
+
+moenus create[] #O(1);
+    head = neg[1].
+    free = 0.
+    pointers = :1, 2, 3, 4, 5, 6, 7, 8, 9, neg[1];.
+    values = creareAcies[10].
+;
+
+moenus addToFront[val] #O(1);
+    temp = head.
+    head = free.
+    locareIndicina[values, free, val].
+    free = potiorIndicina[pointers, head].
+    locareIndicina[pointers, head, temp].
+;
+
+moenus addToBack[val] #O(1) - yeah i know.;
+    curr = head.
+    next = potiorIndicina[pointers, curr].
+    addToFront[potiorIndicina[values, head]].
+    dum[next != neg[1]]
+        locareIndicina[values, curr, potiorIndicina[values, next]].
+        curr = next.
+        next = potiorIndicina[pointers, next].
+    ;
+    locareIndicina[values, curr, val].
+;
+
+moenus insertAtIndex[ind, val] #O(n);
+    si[ind == 0]
+        addToFront[val].
+    ;
+    aut
+        curr = head.
+        next = potiorIndicina[pointers, curr].
+        addToFront[potiorIndicina[values, head]].
+        dum[ind >= 2]
+            locareIndicina[values, curr, potiorIndicina[values, next]].
+            curr = next.
+            next = potiorIndicina[pointers, next].
+            ind = ind - 1.
+        ;
+        locareIndicina[values, curr, val].
+    ;
+;
+
+moenus removeFromFront[] #O(1);
+    head = potiorIndicina[pointers, head].
+;
+
+moenus removeFromBack[] #O(n);
+    curr = head.
+    free = head.
+    head = potiorIndicina[pointers, head].
+    currVal = potiorIndicina[values, curr].
+    dum[curr != neg[1]]
+        curr = potiorIndicina[pointers, curr].
+        temp = potiorIndicina[values, curr].
+        locareIndicina[values, curr, currVal].
+        currVal = temp.
+    ;
+;
+
+moenus removeAtIndex[ind] #O(n);
+    curr = head.
+    free = head.
+    head = potiorIndicina[pointers, head].
+    currVal = potiorIndicina[values, curr].
+    dum[ind >= 1]
+        curr = potiorIndicina[pointers, curr].
+        temp = potiorIndicina[values, curr].
+        locareIndicina[values, curr, currVal].
+        currVal = temp.
+        ind = ind - 1.
+    ;
+;
+
+moenus visualize[] #O(n);
+    st = "List ".
+    curr = head.
+    dum[curr != neg[1]]
+        st = st + "-> ".
+        st = st + facereStrictus[potiorIndicina[values, curr]] + " ".
+        curr = potiorIndicina[pointers, curr].
+    ;
+    legere[st].
+;
+
+moenus testList[]
+    create[].
+    addToFront[4].
+    addToFront[3].
+    addToFront[9].
+    addToFront[6].
+    addToFront[2].
+    legere["inserting the values: 4, 3, 9, 6, 2 each to the front."].
+    visualize[].
+    legere["removing from the front."].
+    removeFromFront[].
+    visualize[].
+    legere["inserting 50 at index 3."].
+    insertAtIndex[3, 50].
+    visualize[].
+    legere["inserting 49 at index 0."].
+    insertAtIndex[0, 49].
+    visualize[].
+    legere["inserting 38 at index 1"].
+    insertAtIndex[1, 38].
+    visualize[].
+    legere["removing from the back."].
+    removeFromBack[].
+    visualize[].
+    legere["removing from index 5"].
+    removeAtIndex[5].
+    visualize[].
+    legere["removing from index 0"].
+    removeAtIndex[0].
+    visualize[].
+    legere["removing from index 1"].
+    removeAtIndex[1].
+    visualize[].
+    legere["adding 88 to back."].
+    addToBack[88].
+    visualize[].
+;
+
+testList[].

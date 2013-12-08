@@ -1,0 +1,14 @@
+moenus cond[n]
+    si[[n % 2] == 0]
+        legere[n, " is even."].
+    ;
+    aut si[[n % 2] == 1]
+            legere[n, " is odd."].
+        ;
+        aut
+            legere["An error has occured."].
+        ;
+    ;
+;
+cond[8].
+cond[5].

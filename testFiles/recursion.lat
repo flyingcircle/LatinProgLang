@@ -1,0 +1,13 @@
+moenus fib[n]
+    si[n == 0]
+        revenire 0.
+    ;
+    si[n == 1]
+        revenire 1.
+    ;
+    aut
+        revenire [fib[n-1] + fib[n-2]].
+    ;
+;
+legere["term number 3 in the fibonacci sequence is: ", fib[3]].
+legere["term number 7 in the fibonacci sequence is: ", fib[7]].

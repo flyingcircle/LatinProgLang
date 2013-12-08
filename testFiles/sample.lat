@@ -1,0 +1,6 @@
+moenus square[x]
+    y = x * x.
+    revenire y.
+    ;
+legere["the value of the square of 4 is: "].
+legere[square[4]].

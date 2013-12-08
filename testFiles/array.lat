@@ -1,0 +1,8 @@
+arr = :4, 9, 10, 33, 29;.
+arr2 = creareAcies[6].
+
+legere["At index 3: ", potiorIndicina[arr, 3], " (should be 33)"].
+legere["At index 0: ", potiorIndicina[arr, 0], " (should be 4)"].
+locareIndicina[arr, 3, 11].
+legere["At index 3: ", potiorIndicina[arr, 3], " (should be 11)"].
+legere[arr2].
