@@ -1,5 +1,5 @@
 moenus apply[f, x] #apply the function f with a single argument x;
-    f[x].
+    revenire f[x].
 ;
 
 moenus square[x]

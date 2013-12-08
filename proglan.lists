@@ -19,7 +19,7 @@ moenus addToFront[val] #O(1);
 ;
 
 moenus addToBack[val] #O(1) - yeah i know.;
-    curr = head.
+    curr = head.      #didn't have time to add tail pointer";
     next = potiorIndicina[pointers, curr].
     addToFront[potiorIndicina[values, head]].
     dum[next != neg[1]]
